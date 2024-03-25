@@ -250,3 +250,4 @@ C:\Users\davi_\source\repos\ExerMVC\ExerMVC\obj\Debug\net8.0\refint\ExerMVC.dll
 C:\Users\davi_\source\repos\ExerMVC\ExerMVC\obj\Debug\net8.0\ExerMVC.pdb
 C:\Users\davi_\source\repos\ExerMVC\ExerMVC\obj\Debug\net8.0\ExerMVC.genruntimeconfig.cache
 C:\Users\davi_\source\repos\ExerMVC\ExerMVC\obj\Debug\net8.0\ref\ExerMVC.dll
+C:\Users\davi_\source\repos\ExerMVC\ExerMVC\obj\Debug\net8.0\ExerMVC.sourcelink.json

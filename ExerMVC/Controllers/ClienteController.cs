@@ -72,6 +72,18 @@ namespace ExerMVC.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult Delete(int id)
+        {
+            var cliente = _context.Clientes.Find(id);
+            if( cliente is null)
+            {
+                return BadRequest("Cliente não existe!");
+            }
+            return View(cliente);
+        }
+
+        [HttpPost]
         public ActionResult Delete(Cliente cliente)
         {
             var clienteBanco = _context.Clientes.Find(cliente.Id);
