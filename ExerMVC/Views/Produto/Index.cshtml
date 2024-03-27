@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ExerMVC.Models.Produto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Lista de Produtos</h2>
+<br />
+
+<p>
+    <a asp-action="Create">Novo Produto</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Preco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Preco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar Produto</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes do Produto</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Excluir Produto</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

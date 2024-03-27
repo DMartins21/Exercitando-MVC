@@ -4,7 +4,6 @@
     ViewData["Title"] = "Excluíndo Funcionario";
 }
 
-
 <h3>Você quer realmente excluir esse funcionario?</h3>
 <div>
     <h4>Dados do Funcionário que será excluído:</h4>
@@ -38,7 +37,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Excluir" class="btn btn-danger" /> |
-        <a asp-action="Index">Voltar ao inicio</a>
+        <input type="submit" value="Excluir Funcionario" class="btn btn-danger" /> |
+        <a asp-action="Index">Voltar</a>
     </form>
 </div>

@@ -13,5 +13,10 @@ namespace ExerMVC.Models
         public string Number { get; set; }
         [DisplayName("Endereço")]
         public string Adress { get; set; }
+
+        public string nomeCompleto()
+        {
+            return $"{Name} {LastName}";
+        }
     }
 }

@@ -1,5 +1,7 @@
 using ExerMVC.Context;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +24,14 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+var suportedCultures = new [] { new CultureInfo("pt-BR") };
+app.UseRequestLocalization(new RequestLocalizationOptions
+{
+    DefaultRequestCulture = new RequestCulture("pt-BR", "pt-BR"),
+    SupportedCultures = suportedCultures,
+    SupportedUICultures = suportedCultures
+});
 
 app.UseAuthorization();
 

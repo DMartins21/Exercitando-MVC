@@ -1,12 +1,10 @@
 ﻿@model ExerMVC.Models.Cliente
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editando Dados do Cliente";
 }
 
-<h1>Edit</h1>
-
-<h4>Cliente</h4>
+<h3>Dados do Cliente</h3>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -35,16 +33,12 @@
             </div>
             <br />
             <div class="form-group">
-                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <input type="submit" value="Salvar Novos Dados" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Voltar ao Inicio</a>
+    <a asp-action="Index">Voltar</a>
 </div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}

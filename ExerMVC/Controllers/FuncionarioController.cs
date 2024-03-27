@@ -16,7 +16,7 @@ namespace ExerMVC.Controllers
 
         public ActionResult Index()
         {
-            var funcionarios = _context.Funcionarios.AsNoTracking().ToList();
+            var funcionarios = _context.Funcionarios.AsNoTracking().ToList().Take(3);
             return View(funcionarios);
         }
 

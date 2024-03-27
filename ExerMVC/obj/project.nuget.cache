@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NkyXaU0UFLYGYdVQJQ5/y/tuBTp4zNplDqnd6Ukx5ijWOFvSKXm0x4Fz0HyH16yLAumfJDcD22W8eza+fUJ7Kw==",
+  "dgSpecHash": "4hLau/4EmC3+76OHRbIl6f+l/ITqPjANLi4VFjWZYZ4dNbHzKKr3mKs/XVK8bVDcLW2BYvtizdAvLzOj0tjP8Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\davi_\\source\\repos\\ExerMVC\\ExerMVC\\ExerMVC.csproj",
   "expectedPackageFiles": [
@@ -82,6 +82,7 @@
     "C:\\Users\\davi_\\.nuget\\packages\\microsoft.entityframeworkcore.design\\8.0.3\\microsoft.entityframeworkcore.design.8.0.3.nupkg.sha512",
     "C:\\Users\\davi_\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.3\\microsoft.entityframeworkcore.relational.8.0.3.nupkg.sha512",
     "C:\\Users\\davi_\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\8.0.3\\microsoft.entityframeworkcore.sqlserver.8.0.3.nupkg.sha512",
+    "C:\\Users\\davi_\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\8.0.3\\microsoft.entityframeworkcore.tools.8.0.3.nupkg.sha512",
     "C:\\Users\\davi_\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\davi_\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
     "C:\\Users\\davi_\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
