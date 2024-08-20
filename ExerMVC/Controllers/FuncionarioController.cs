@@ -16,7 +16,12 @@ namespace ExerMVC.Controllers
 
         public ActionResult Index()
         {
+            ViewData["Titulo"] = "Funcionarios";
+            ViewData["Data"] = DateTime.Now;
             var funcionarios = _context.Funcionarios.AsNoTracking().ToList().Take(3);
+            var totalFuncionarios = funcionarios.Count();
+            ViewBag.totalFuncionario = "O total de funcionarios registrados é:";
+            ViewBag.funcionarios = totalFuncionarios;
             return View(funcionarios);
         }
 

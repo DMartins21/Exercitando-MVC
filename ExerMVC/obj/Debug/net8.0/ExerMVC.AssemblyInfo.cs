@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExerMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f4a77c129e03ea966f3c1ee6d50fef5a6853e22e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58df75283d8f50d6bfb930560e9835df14ce7274")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExerMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExerMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

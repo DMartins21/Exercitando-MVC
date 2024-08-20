@@ -11,5 +11,6 @@ namespace ExerMVC.Context
         public DbSet<Funcionario> Funcionarios { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Produto> Produto { get; set; }
+        public DbSet<CarrinhoCompraItem> CarrinhoCompraItens { get; set; }
     }
 }

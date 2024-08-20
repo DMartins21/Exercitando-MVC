@@ -4,6 +4,7 @@ using ExerMVC.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ExerMVC.Migrations
 {
     [DbContext(typeof(ExerContext))]
-    partial class ExerContextModelSnapshot : ModelSnapshot
+    [Migration("20240327175340_Vendas")]
+    partial class Vendas
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,31 +24,6 @@ namespace ExerMVC.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("ExerMVC.Models.CarrinhoCompraItem", b =>
-                {
-                    b.Property<int>("CarrinhoCompraItemId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CarrinhoCompraItemId"));
-
-                    b.Property<string>("CarrinhoCompraId")
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<int?>("ProdutoId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Quantidade")
-                        .HasColumnType("int");
-
-                    b.HasKey("CarrinhoCompraItemId");
-
-                    b.HasIndex("ProdutoId");
-
-                    b.ToTable("CarrinhoCompraItens");
-                });
 
             modelBuilder.Entity("ExerMVC.Models.Cliente", b =>
                 {
@@ -125,11 +103,51 @@ namespace ExerMVC.Migrations
                     b.ToTable("Produto");
                 });
 
-            modelBuilder.Entity("ExerMVC.Models.CarrinhoCompraItem", b =>
+            modelBuilder.Entity("ExerMVC.Models.Vendas", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("ClienteId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("FuncionarioId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProdutoId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClienteId");
+
+                    b.HasIndex("FuncionarioId");
+
+                    b.HasIndex("ProdutoId");
+
+                    b.ToTable("Vendas");
+                });
+
+            modelBuilder.Entity("ExerMVC.Models.Vendas", b =>
+                {
+                    b.HasOne("ExerMVC.Models.Cliente", "Cliente")
+                        .WithMany()
+                        .HasForeignKey("ClienteId");
+
+                    b.HasOne("ExerMVC.Models.Funcionario", "Funcionario")
+                        .WithMany()
+                        .HasForeignKey("FuncionarioId");
+
                     b.HasOne("ExerMVC.Models.Produto", "Produto")
                         .WithMany()
                         .HasForeignKey("ProdutoId");
+
+                    b.Navigation("Cliente");
+
+                    b.Navigation("Funcionario");
 
                     b.Navigation("Produto");
                 });
